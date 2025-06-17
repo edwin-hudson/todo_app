@@ -1,0 +1,177 @@
+:root {
+    --shadow-1: 0 0 20px rgba(0, 0, 0, 0.2);
+    --shadow-2: 0 8 20px rgba(0, 0, 0, 0.1);
+
+    --color-bg-2: #7209b7;
+    --color-bg-1: #3a86ff;
+    --color-bg-3: #ffa017;
+    --color-bg-4: #34b409;
+    --color-white: #FFFFFF;
+    --color-white-2: #f9f9f9;
+    --color-border: #ccc;
+    --color-border-2: #5c84f0;
+    --color-text-bg: #eef3ff;
+    --color-dash: #80807e;
+    --color-red: #ff0029;
+
+    --header-text: #333;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    font-size: 16px;
+    font-family: 'Poppins', Sans-serif;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, var(--color-bg-1) 10%, var(--color-bg-2) 60%) fixed;
+
+}
+
+.container {
+    width: 600px;
+    background: var(--color-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--header-text);
+}
+
+form {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+input {
+    font-size: 16px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    outline: none;
+    border: 1px solid var(--color-border);
+}
+
+input[type="text"]:focus {
+    border-color: var(--color-border-2);
+    background-color: var(--color-text-bg);
+}
+
+
+
+#search-task {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+#todo-input {
+    width: 100%;
+    border-radius: 6px 0 0 6px;
+}
+
+#todo-form button {
+    font-size: 16p;
+    padding: 12px 20px;
+    background: var(--color-bg-1);
+    color: var(--color-white);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0 6px 6px 0;
+    transition: background 0.3s ;
+}
+
+#todo-form button:hover {
+    background: #476bd6;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: var(--color-white-2);
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    border-radius: 6px;
+    border-left: 5px solid var(--color-bg-3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+li.completed {
+    border-left: 5px solid var(--color-bg-4);
+}
+
+.drag-handle {
+    cursor: grabbing;
+    font-size: 24px;
+    color: var(--color-dash);
+}
+
+.task-text {
+    line-height: 1.2em;
+    padding: 5px;
+}
+
+.task-text:focus {
+    outline: 1.5px dashed var(--color-dash);
+}
+
+.completed .task-text {
+    text-decoration: line-through;
+    color: var(--color-dash);
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: auto;
+}
+
+button.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-dash);
+    border: none;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+button.button:hover {
+    background: var(--color-border);
+    transform: translateY(-5px);
+}
+
+.remove:hover {
+    color: var(--color-red);
+}
+
+.checkmark:hover {
+    color: var(--color-bg-4);
+}
+
+.completed .checkmark:hover {
+    color: var(--color-dash);
+}

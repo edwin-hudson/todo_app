@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.7.2-web/css/all.min.css">
+    <title>Todo App | Hudson</title>
+    <style>
+        @font-face {
+            font-family: 'Poppins';
+            src: url(assets/font/poppins/Poppins-Medium.ttf);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>To Do List</h1>
+        <input type="text" name="" id="search-task" placeholder="Search tasks...">
+        <form action="" id="todo-form">
+            <input type="text" name="" id="todo-input" placeholder="Add a new task...">
+            <button type="submit">Add</i></button>
+        </form>
+        <ul id="todo-list">
+            <li class="completed">
+                <span class="drag-handle">&#8801</span>
+                <span class="task-text" contenteditable="true">Create simple to do app.</span>
+                <span class="action">
+                    <button class="button remove">&#10007</button>
+                    <button class="button checkmark">&#10003</button>
+                </span>
+            </li>
+            <li>
+                <span class="drag-handle">&#8801</span>
+                <span class="task-text" contenteditable="true">Finish the client website design.</span>
+                <span class="action">
+                    <button class="button remove">&#10007</button>
+                    <button class="button checkmark">&#10003</button>
+                </span>
+            </li>
+        </ul>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
